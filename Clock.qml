@@ -16,7 +16,7 @@ Item {
         var date = new Date();
         hours = 0;//date.getHours();
         minutes = 0;//date.getMinutes();
-        seconds = 0;//date.getSeconds();
+        seconds = date.getSeconds();
     }
 
     Timer {
@@ -57,12 +57,14 @@ Item {
     Image {
         id: minuteHand
         //source: "images/minute.png"
+        //source: "images/МЕНЮ Часы 1 страница большая стрелка.png"
         x: 295; y: 93
         width: 10
         height: 221
         transform: Rotation {
             id: minuteRotation
-            angle: minutes * 6
+            //angle: minutes * 6
+            angle: seconds * 6
             origin.x: 5
             origin.y: 211
 /*
@@ -79,16 +81,17 @@ Item {
 
     Image {
         id: secondHand
-        //source: "images/second.png"
         source: "images/МЕНЮ Часы 1 страница маленькая стрелка.png"
-        x: 305; y: 213
-        width: 63
-        height: 99
+        //source: "images/МЕНЮ Часы 1 страница большая стрелка.png"
+        x: 307; y: 213
+        width: 64
+        height: 100
         transform: Rotation {
             id: secondRotation
             angle: seconds * 6
-            origin.x: 32
-            origin.y: 90
+            origin.x: 12
+            origin.y: 87
+
 /*
             Behavior on angle {
                 SpringAnimation {
@@ -104,7 +107,8 @@ Item {
     Rectangle {
         x: 305
         y: 285
-        color: "black"
+        //color: "black"
+        color: "transparent"
         width: 30
         height: 30
         radius: 15
