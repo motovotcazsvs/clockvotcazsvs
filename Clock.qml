@@ -14,9 +14,9 @@ Item {
 
     function timeChanged() {
         var date = new Date();
-        hours = date.getHours();
-        minutes = date.getMinutes();
-        seconds = date.getSeconds();
+        hours = 0;//date.getHours();
+        minutes = 0;//date.getMinutes();
+        seconds = 0;//date.getSeconds();
     }
 
     Timer {
@@ -36,7 +36,7 @@ Item {
         x: 294; y: 140
         width: 10
         height: 174
-        source: "images/hour.png"
+        //source: "images/hour.png"
         transform: Rotation {
             id: hourRotation
             angle: hours * 30
@@ -56,7 +56,7 @@ Item {
 
     Image {
         id: minuteHand
-        source: "images/minute.png"
+        //source: "images/minute.png"
         x: 295; y: 93
         width: 10
         height: 221
@@ -79,15 +79,16 @@ Item {
 
     Image {
         id: secondHand
-        source: "images/second.png"
-        x: 297; y: 42
-        width: 5
-        height: 273
+        //source: "images/second.png"
+        source: "images/МЕНЮ Часы 1 страница маленькая стрелка.png"
+        x: 305; y: 213
+        width: 63
+        height: 99
         transform: Rotation {
             id: secondRotation
             angle: seconds * 6
-            origin.x: 2.5
-            origin.y: 263
+            origin.x: 32
+            origin.y: 90
 /*
             Behavior on angle {
                 SpringAnimation {
@@ -101,12 +102,12 @@ Item {
     }
 
     Rectangle {
-        x: 285
-        y: 292
+        x: 305
+        y: 285
         color: "black"
         width: 30
         height: 30
-        radius: 50
+        radius: 15
     }
 
 }
