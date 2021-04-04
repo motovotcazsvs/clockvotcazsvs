@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Clock.qml</file>
+        <file>images/clock-face.png</file>
+        <file>images/hour.png</file>
+        <file>images/minute.png</file>
+        <file>images/second.png</file>
+        <file>images/МЕНЮ Часы 1 страница большая стрелка.png</file>
+        <file>images/МЕНЮ Часы 1 страница маленькая стрелка.png</file>
+        <file>images/МЕНЮ Часы 1 страница.png</file>
+    </qresource>
+</RCC>
